@@ -1,0 +1,92 @@
+.expired-header, .related-header {
+    display: block;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: -1px;
+    padding: 20px 0 5px 0;
+    text-align: left;
+    color: #333;
+}
+.expired-header .header-subtitle {
+    display: block;
+    margin-left: 0;
+    line-height: 33px;
+}
+.expired-header .header-subtitle {
+    color: #666666;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    font-size: 22px;
+    letter-spacing: -1px;
+    margin-left: 10px;
+}
+ul.expired-coupons li {
+    padding: 0 20px;
+}
+ul.expired-coupons.coupon-list li a.store-img {
+    width: 10%;
+    height: auto;
+}
+ul.expired-coupons li a img {
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+.expired-header .header-subtitle:before {
+    content: '\f152';
+    font-family: var(--fontAwe);
+    font-weight: 900;
+    color: #666666;
+    font-size: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+ul.expired-coupons li div.coupon-info {
+    width: 90%;
+    padding-right: 5px;
+}
+ul.expired-coupons li div.coupon-info .item-title {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ul.expired-coupons li div.coupon-info h3 {
+    font-weight: normal;
+}
+.item.expired-item .item-title span.coupon-code {
+    font-weight: 600;
+}
+.item.expired-item .item-title span.coupon-code span.code {
+    text-decoration: line-through;
+}
+.item.expired-item .item-title span.coupon-code:after {
+    content: "Expirado";
+    transform: rotate(-3deg);
+    position: relative;
+    display: inline-block;
+    background-color: #f2f0f7;
+    border-radius: .25rem;
+    color: #68627a;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    font-weight: normal;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.expired-content{
+    margin-top: 10px;
+}
+.expired-coupons div.content-block{
+    background: transparent;
+    box-shadow: none;
+    margin-top: 0;
+}
+div.expired-coupons{
+    margin-top: 30px;
+}
+.category-page .middle .container:first-child{
+    padding-top: 10px;
+}

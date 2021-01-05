@@ -1,0 +1,24 @@
+.alert-error{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+}
+.alert-error *{
+    color: #a02020;
+    margin: 0;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+.request-loading{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+}
+.request-loading *{
+    margin: 0;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #414141;
+}

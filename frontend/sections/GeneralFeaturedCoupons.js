@@ -1,9 +1,19 @@
-import React from 'react';
-import Coupon from '../snnipets/Coupon';
+import React, { useEffect } from 'react';
+import ValidCouponItem from '../snnipets/ValidCouponItem';
 import GetEmail from '../snnipets/GetEmail';
+import ShowContentWithLoadingOrError from '../snnipets/ShowContentWithLoadingOrError'
+import { useDispatch, useSelector } from 'react-redux'
+import { listCouponsAction } from '../redux_store/actions/couponsActions';
 
-function GeneralFeaturedCoupons(props) {
-    const coupons = props.generalFeaturedCoupons;
+function GeneralFeaturedCoupons() {
+
+    const dispatch = useDispatch();
+    const { listCoupons } = useSelector((state) => state)
+    const { loading, error, coupons } = listCoupons;
+    useEffect(() => {
+        dispatch(listCouponsAction())
+    }, [dispatch]);
+
     return (
         <section id="middle" className="middle">
             <div className="container">
@@ -13,9 +23,11 @@ function GeneralFeaturedCoupons(props) {
                 <div className="main-content ">
                     <div className="content-block coupons-content">
                         <ul className="coupon-list valid-coupons">
-                            {coupons.map((coupon, index) => (
-                                <Coupon key={coupon._id} coupon={coupon} />                   
-                            ))}
+                            <ShowContentWithLoadingOrError loading={loading} error={error}>
+                                {coupons.map((coupon, index) => (
+                                    <ValidCouponItem key={coupon._id} coupon={coupon} />
+                                ))}
+                            </ShowContentWithLoadingOrError>
                         </ul>
                     </div>
                     <GetEmail />

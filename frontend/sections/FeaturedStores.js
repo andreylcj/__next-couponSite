@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import LogoSquare from '../snnipets/LogoSquare'
+import ShowContentWithLoadingOrError from '../snnipets/ShowContentWithLoadingOrError';
+import { listFeaturedStoresAction } from '../redux_store/actions/featuredStoresActions';
+import { useDispatch, useSelector } from 'react-redux'
 
-function FeaturedStores(props) {
-    const stores = props.featuredStores;
+function FeaturedStores() {
+    const dispatch = useDispatch();
+    const { listFeaturedStore } = useSelector((state) => state)
+    const { loading, error, featuredStores } = listFeaturedStore;
+    const stores = featuredStores;
+    console.log(useSelector((state) => state))
+    useEffect(() => {
+        dispatch(listFeaturedStoresAction())
+    }, [dispatch]);
     return (
         <div className="featured-header-container">
             {/* APPEAR ONLY ON CELL
@@ -13,9 +23,11 @@ function FeaturedStores(props) {
             </button> 
             */}
             <ul className="list">
-                {stores.map((store) => (
-                    <LogoSquare key={store._id} store={store} />
-                ))}
+                <ShowContentWithLoadingOrError loading={loading} error={error}>
+                    {stores.map((store) => (
+                        <LogoSquare key={store._id} store={store} />
+                    ))}
+                </ShowContentWithLoadingOrError>
             </ul>
             <div className="featured-header-indicator"></div>
         </div>

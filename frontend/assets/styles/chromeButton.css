@@ -1,0 +1,35 @@
+
+.sidebar-extension-cta, .extensionItem-cta {
+    background: var(--morant_letter_red);
+    width: 100%;
+    height: 48px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    transition: var(--short_transition);
+    position: relative;
+    transform: scale(1);
+}
+.sidebar-extension-cta:before, .extensionItem-cta:before {
+    opacity: 1;
+    position: relative;
+    background-image: url(/images/chrome_extension/chrome-icons.png);
+    background-size: auto 100%;
+    content: "";
+    display: inline-block;
+    margin-bottom: -7px;
+    margin-right: 6.66666667px;
+    width: 24px;
+    height: 24px;
+}
+
+/* HOVER */
+.sidebar-extension-cta:hover, .extensionItem-cta:hover {
+    background: #f30947;
+    box-shadow: 0 0 10px 2px #f30947;
+    background: var(--morant_letter_red);
+    box-shadow: 0 0 10px 2px var(--morant_letter_red);
+    transform: scale(1.1);
+}

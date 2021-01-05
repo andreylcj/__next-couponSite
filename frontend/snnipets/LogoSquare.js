@@ -22,15 +22,13 @@ function LogoSquare(props) {
                                         width={image.width}
                                         height={image.height}
                                         media={`(max-width: ${image.max_width}px)`}
-                                        crossOrigin="anonymous"
                                         srcSet={image.srcset}
-                                    />) 
+                                    />)
                                     :
                                     (<source
                                         key={subIndex}
                                         width={image.width}
                                         height={image.height}
-                                        crossOrigin="anonymous"
                                         srcSet={image.srcset}
                                     />)
                             ))

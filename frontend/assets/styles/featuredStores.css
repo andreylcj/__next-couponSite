@@ -1,0 +1,107 @@
+/* FEATURED STORES ================================================= */
+.featured-stores {
+    color: #3f3f3f; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0 0;
+    text-align: center;
+}
+.featured-stores .container {
+    padding: 0;
+}
+.featured-stores .title {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.featured-stores .subtitle {
+    font-size: 20px;
+    letter-spacing: 0.1px;
+}
+.featured-stores ul.list, ul.featured-stores {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px 0 0;
+    width: 100%;
+    padding: 0;
+    /*justify-content: center;*/
+}
+.featured-stores .featured-item {
+    display: inline-block;
+    padding: 0 1vw 1vw 0;
+    width: 16.66666667%;
+    border-radius: 2px;
+}
+.featured-stores .featured-item-block {
+    position: relative;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.12);
+    outline: none;
+    transition: all .3s ease-in-out;
+    background-color: #FFF;
+    border-radius: 0;
+    display: block;
+    height: 100%;
+    padding-bottom: 6px;
+    top: 0;
+    transition: all linear 0.1s;
+    overflow: hidden;
+    border-radius: 2px;
+}
+.featured-stores .featured-item-logo {
+    position: relative;
+    display: block;
+    margin: auto;
+    padding-bottom: 66.125%;
+    width: auto;
+}
+.featured-stores .featured-item-logo img, .featured-item-logo source {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    margin: auto;
+}
+.featured-stores .featured-item-info {
+    position: relative;
+    top: -2px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    margin: -15px 0 0;
+}
+
+/* EXCLUSIVE PAGE ==========*/
+.index .featured-stores {
+    padding-top: 50px;
+}
+.index .featured-stores .featured-item-info{
+    display: flex;
+}
+.index .featured-stores .featured-item-logo {
+    margin: 0 12%;
+}
+
+/* HOVER ==========*/
+a.featured-item-block:hover {
+    text-decoration: none;
+    /* box-shadow: 0 5px 6px rgba(0,0,0,0.15); */
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.5);
+    top: -5px;
+}
+
+/* DEVICE ==========*/
+@media (min-width: 1200px){
+    .featured-stores .featured-item {
+        padding: 0 10px 10px 0;
+    }
+}

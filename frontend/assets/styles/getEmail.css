@@ -1,0 +1,90 @@
+/* GET EMAIL ===================================================================*/
+.get-email {
+    display: flex;
+    transition: var(--short_transition);
+    left: 0;
+}
+.get-email .get-email-icon {
+    width: 20%;
+    display: flex;
+}
+.get-email  .get-email-icon .message-container {
+    background-color: #e8e8e8;
+    border-radius: 100%;
+    margin: auto;
+    display: inline-block;
+    padding: 5px;
+}
+.get-email  .get-email-icon i {
+    color: #fff;
+    font-size: 35px;
+    background: var(--morant_letter_red);
+    border-radius: 100%;
+    padding: 15px;
+}
+.get-email-field {
+    width: 80%;
+    align-items: center;
+    display: flex;
+}
+.get-email-field .email-form {
+    display: flex;
+}
+.get-email .email-form .email-label {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 120%;
+    position: relative;
+    margin: 0 50px 0 0;
+    padding-left: 0;
+    text-align: right;
+    vertical-align: top;
+    width: 47%;
+}
+.get-email .email-form .email-input {
+    border-radius: 6px 0 0 6px;
+    border: 1px solid var(--morant_letter_red);
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: -1px;
+    margin: 0 0 0 -20px;
+    width: 190px;
+    height: 44px;
+    padding: 4px 6px;
+}
+.get-email .email-form .email-submit {
+    background-color: var(--morant_letter_red);
+    border: 0;
+    border-radius: 6px;
+    color: #FFF;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    padding: 14px 40px;
+    width: auto;
+    line-height: 100%;
+    position: relative;
+    left: -20px;
+    vertical-align: bottom;
+    transition: all linear 0.1s;
+}
+
+/* HOVER ==================*/
+.get-email .email-form .email-submit:hover {
+    background: var(--morant_letter_red);
+    box-shadow: var(--shadow_glow_effect) var(--morant_letter_red);
+    transform: scale(1.1);
+}
+/* EXCLUSIVE PAGE ==================*/
+/* DEVICE ==================*/
+@media (min-width: 1200px){
+    .get-email {
+        padding: 20px 0;
+    }
+    .get-email .email-form .email-input {
+        width: 289px;
+    }
+}

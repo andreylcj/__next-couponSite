@@ -1,0 +1,58 @@
+/* TOP CATEGORIES ===================================================================*/
+.top-categories {
+    margin-top: 50px;
+}
+.top-categories h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: normal;
+}
+.top-categories .category-list {
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+.top-categories .category-list li {
+    display: inline-block;
+    width: 19%;
+    margin: 0 10px 10px 0;
+    color: var(--morant_letter_red);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.05);
+    font-size: 15px;
+    border: 1px solid #fff;
+    padding: 0;
+    color: #333;
+    background: #fff;
+    border-radius: 2px;
+    position: relative;
+    top: 0;
+    transform: scale(1);
+    transition: var(--short_transition);
+}
+.top-categories .category-list a {
+    font-size: 17px;
+    width: 100%;
+    padding: 15px 10px;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+}
+.top-categories .category-list i {
+    margin: 0 0 15px 0;
+    font-size: 75px;
+    text-align: center;
+    display: block;
+}
+/* HOVER ==================*/
+.top-categories .category-list li:hover {
+    background: var(--morant_letter_red);
+    color: #fff;
+    border-color: var(--morant_letter_red);
+    top: -5px;
+    box-shadow: 0 0 10px 2px #ef3445;
+    transform: scale(1.025);
+    z-index: 10;
+}
+/* EXCLUSIVE PAGE ==================*/
+/* DEVICE ==================*/

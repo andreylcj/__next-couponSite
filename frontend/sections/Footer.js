@@ -138,10 +138,11 @@ function Footer() {
                         José dos Campos, SP - CEP: 12242-000</p>
                             <p>
                                 <Link href="/termos-uso">
-                                    <a>Termos de Uso</a>
-                                </Link> |
-                            <Link href="/privacidade">
-                                    <a>Política de Privacidade</a>
+                                    <a>Termos de Uso </a>
+                                </Link>
+                                |
+                                <Link href="/privacidade">
+                                    <a> Política de Privacidade</a>
                                 </Link>
                             </p>
                         </div>

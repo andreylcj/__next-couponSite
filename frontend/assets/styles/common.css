@@ -1,0 +1,28 @@
+/* COMMOM ==========================================*/
+.index{
+    position: relative;
+    top: 65px;
+}
+.container{
+    padding: 0;
+}
+.item {
+    position: relative;
+    background-color: #FFF;
+    border-collapse: separate;
+    padding: 25px 20px;
+    clear: both;
+    display: block;
+    margin: 0 0 8px;
+    width: 100%;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.05);
+    border-radius: 3px;
+}
+.subTitle-hr {
+    clear: both;
+    border-top: solid var(--purple_text);
+    border-width: 1px 0 0;
+    margin: 20px auto 40px auto;
+    height: 0;
+    width: 50px;
+}

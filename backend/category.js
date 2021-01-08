@@ -1,7 +1,8 @@
 const categoryData = {
-    category: {
+    category: [{
         _id: '1',
         title: 'Alimentos e Bebidas',
+        hiffen_title: 'alimentos-e-bebidas',
         related_stores: [
             {
                 _id: '1',
@@ -88,7 +89,7 @@ const categoryData = {
                 ]
             },
             {
-                _id: '4',
+                _id: '5',
                 href: 'stores_page/casas_bahia.php',
                 nicename: 'Casas Bahia',
                 coupons: '23',
@@ -109,7 +110,7 @@ const categoryData = {
                 ]
             },
             {
-                _id: '4',
+                _id: '6',
                 href: 'stores_page/casas_bahia.php',
                 nicename: 'Casas Bahia',
                 coupons: '23',
@@ -130,7 +131,7 @@ const categoryData = {
                 ]
             },
             {
-                _id: '4',
+                _id: '7',
                 href: 'stores_page/casas_bahia.php',
                 nicename: 'Casas Bahia',
                 coupons: '23',
@@ -151,7 +152,7 @@ const categoryData = {
                 ]
             },
             {
-                _id: '4',
+                _id: '8',
                 href: 'stores_page/casas_bahia.php',
                 nicename: 'Casas Bahia',
                 coupons: '23',
@@ -172,7 +173,7 @@ const categoryData = {
                 ]
             },
             {
-                _id: '4',
+                _id: '9',
                 href: 'stores_page/casas_bahia.php',
                 nicename: 'Casas Bahia',
                 coupons: '23',
@@ -340,7 +341,7 @@ const categoryData = {
                 filter_type: 'offer'
             },
         ]
-    }
+    }]
 }
 
 export default categoryData

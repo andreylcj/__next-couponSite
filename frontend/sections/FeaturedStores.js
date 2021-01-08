@@ -1,17 +1,27 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react'
+import { DataContext } from '../store/GlobalState'
+import ACTION from '../store/Actions'
 import LogoSquare from '../snnipets/LogoSquare'
 import ShowContentWithLoadingOrError from '../snnipets/ShowContentWithLoadingOrError';
-import { listFeaturedStoresAction } from '../redux_store/actions/featuredStoresActions';
-import { useDispatch, useSelector } from 'react-redux'
+import { getData } from '../assets/utils/fetchData';
 
-function FeaturedStores() {
-    const dispatch = useDispatch();
-    const { listFeaturedStore } = useSelector((state) => state)
+function FeaturedStores(props) {
+
+    const [state, dispatch] = useContext(DataContext);
+    const { listFeaturedStore } = state
     const { loading, error, featuredStores } = listFeaturedStore;
     const stores = featuredStores;
-    console.log(useSelector((state) => state))
-    useEffect(() => {
-        dispatch(listFeaturedStoresAction())
+    useEffect(async () => {
+
+        dispatch({
+            type: ACTION.FEATURED_STORE_REQUEST
+        });
+        try {
+            const res = await getData(props.apiURL);
+            dispatch({ type: ACTION.FEATURED_STORE_SUCCESS, payload: res })
+        } catch (error) {
+            dispatch({ type: ACTION.FEATURED_STORE_FAIL, payload: error.message })
+        }
     }, [dispatch]);
     return (
         <div className="featured-header-container">

@@ -1,7 +1,9 @@
 import React from 'react'
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 function Footer() {
+    const router = useRouter().pathname;
     return (
         <footer id="footer" >
             <div className="container">
@@ -125,13 +127,17 @@ function Footer() {
                     </div>
                 </nav>
                 <div className="footer-legal u-foot">
-                    <div className="logo">
-                        <Link href="/">
-                            <a title="Ir para a página inicial" >
-                                <img src="/images/logos/oblique_shadow_no_shape_logo.png" alt="Morant - Cupons de Desconto Online Grátis" crossOrigin="anonymous" />
-                            </a>
-                        </Link>
-                    </div>
+                    {(router === '/') ?
+                        ('') : (
+                            <div className="logo">
+                                <Link href="/">
+                                    <a title="Ir para a página inicial" >
+                                        <img src="/images/logos/oblique_shadow_no_shape_logo.png" alt="Morant - Cupons de Desconto Online Grátis" crossOrigin="anonymous" />
+                                    </a>
+                                </Link>
+                            </div>
+                        )}
+
                     <div className="legal-info">
                         <div className="inner-div">
                             <p>© 2012-2020 Morant Divulgação Virtual LTDA | 12.648.066/0001-71 | Endereço: Av. São João, 2405 - São

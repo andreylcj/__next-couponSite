@@ -1,15 +1,39 @@
-import React from 'react'
+import React, { useEffect, useContext } from 'react'
 import CategoryRelatedStores from '../../sections/CategoryRelatedStores'
-import categoryData from '../../simulate_data/category'
 import ValidCoupons from '../../sections/ValidCoupons'
 import HistoryPages from '../../snnipets/HistoryPages'
 import ExpiredCoupons from '../../sections/ExpiredCoupons'
+import ACTION from '../../store/Actions'
+import { getData } from '../../assets/utils/fetchData'
+import { DataContext } from '../../store/GlobalState'
 
 function CategoryPage(props) {
-    const category = props.category;
+    const category_hiffen_name = props.category_hiffen_name;
+    const [state, dispatch] = useContext(DataContext);
+    const { categoryReduxStore } = state
+    const { categoryRedux } = categoryReduxStore;
+    const category = categoryRedux;
+    useEffect(async () => {
+
+        dispatch({
+            type: ACTION.CATEGORY_TITLE_REQUEST, payload: category_hiffen_name
+        });
+        try {
+            const data = await getData(`/api/categorias/${category_hiffen_name}`);
+            dispatch({ type: ACTION.CATEGORY_TITLE_SUCCESS, payload: data })
+        } catch (error) {
+            dispatch({
+                type: ACTION.CATEGORY_TITLE_FAIL,
+                payload:
+                    error.response && error.response.data.message ?
+                        error.response.data.message : error.message
+            })
+        }
+
+    }, [dispatch]);
     return (
         <>
-            <CategoryRelatedStores category={category} />
+            <CategoryRelatedStores />
 
             <section id="middle" className="middle category-page">
                 <div className="container">
@@ -33,10 +57,7 @@ export default CategoryPage
 
 export async function getServerSideProps({ params: { category } }) {
 
-    //const res = await getData(`categorias/${category}`);
-    const res = categoryData;
-
     return {
-        props: { category: res.category }, // will be passed to the page component as props
+        props: { category_hiffen_name: category }, // will be passed to the page component as props
     }
 }

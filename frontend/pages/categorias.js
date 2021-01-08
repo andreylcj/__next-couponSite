@@ -4,7 +4,7 @@ import TopCategories from '../sections/TopCategories'
 function Categories() {
     return (
         <>
-            <TopCategories />
+            <TopCategories apiURL='/api/categorias/top-categorias' />
         </>
     )
 }

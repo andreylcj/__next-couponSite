@@ -6,7 +6,7 @@ const data = {
             href: 'stores_page/casas_bahia.php',
             nicename: 'Casas Bahia',
             coupons: '23',
-            cashback: '1,5', 
+            cashback: '1,5',
             images: [
                 {
                     srcset: '/images/stores_logos/logo_casas_bahia_max_wid_480.png',
@@ -27,7 +27,7 @@ const data = {
             href: 'stores_page/casas_bahia.php',
             nicename: 'Casas Bahia',
             coupons: '23',
-            cashback: '1,5', 
+            cashback: '1,5',
             images: [
                 {
                     srcset: '/images/stores_logos/logo_casas_bahia_max_wid_480.png',
@@ -48,7 +48,7 @@ const data = {
             href: 'stores_page/casas_bahia.php',
             nicename: 'Casas Bahia',
             coupons: '23',
-            cashback: '1,5', 
+            cashback: '1,5',
             images: [
                 {
                     srcset: '/images/stores_logos/logo_casas_bahia_max_wid_480.png',
@@ -69,7 +69,7 @@ const data = {
             href: 'stores_page/casas_bahia.php',
             nicename: 'Casas Bahia',
             coupons: '23',
-            cashback: '1,5', 
+            cashback: '1,5',
             images: [
                 {
                     srcset: '/images/stores_logos/logo_casas_bahia_max_wid_480.png',
@@ -90,7 +90,7 @@ const data = {
             href: 'stores_page/casas_bahia.php',
             nicename: 'Casas Bahia',
             coupons: '23',
-            cashback: '1,5', 
+            cashback: '1,5',
             images: [
                 {
                     srcset: '/images/stores_logos/logo_casas_bahia_max_wid_480.png',
@@ -111,7 +111,7 @@ const data = {
             href: 'stores_page/casas_bahia.php',
             nicename: 'Casas Bahia',
             coupons: '23',
-            cashback: '1,5', 
+            cashback: '1,5',
             images: [
                 {
                     srcset: '/images/stores_logos/logo_casas_bahia_max_wid_480.png',
@@ -132,7 +132,7 @@ const data = {
             href: 'stores_page/casas_bahia.php',
             nicename: 'Casas Bahia',
             coupons: '23',
-            cashback: '1,5', 
+            cashback: '1,5',
             images: [
                 {
                     srcset: '/images/stores_logos/logo_casas_bahia_max_wid_480.png',
@@ -153,7 +153,7 @@ const data = {
             href: 'stores_page/casas_bahia.php',
             nicename: 'Casas Bahia',
             coupons: '23',
-            cashback: '1,5', 
+            cashback: '1,5',
             images: [
                 {
                     srcset: '/images/stores_logos/logo_casas_bahia_max_wid_480.png',
@@ -174,7 +174,7 @@ const data = {
             href: 'stores_page/casas_bahia.php',
             nicename: 'Casas Bahia',
             coupons: '23',
-            cashback: '1,5', 
+            cashback: '1,5',
             images: [
                 {
                     srcset: '/images/stores_logos/logo_casas_bahia_max_wid_480.png',
@@ -195,7 +195,7 @@ const data = {
             href: 'stores_page/casas_bahia.php',
             nicename: 'Casas Bahia',
             coupons: '23',
-            cashback: '1,5', 
+            cashback: '1,5',
             images: [
                 {
                     srcset: '/images/stores_logos/logo_casas_bahia_max_wid_480.png',
@@ -216,7 +216,7 @@ const data = {
             href: 'stores_page/casas_bahia.php',
             nicename: 'Casas Bahia',
             coupons: '23',
-            cashback: '1,5', 
+            cashback: '1,5',
             images: [
                 {
                     srcset: '/images/stores_logos/logo_casas_bahia_max_wid_480.png',
@@ -237,7 +237,7 @@ const data = {
             href: 'stores_page/casas_bahia.php',
             nicename: 'Casas Bahia',
             coupons: '23',
-            cashback: '1,5', 
+            cashback: '1,5',
             images: [
                 {
                     srcset: '/images/stores_logos/logo_casas_bahia_max_wid_480.png',
@@ -376,8 +376,8 @@ const data = {
     topCategories: [
         {
             _id: '1',
-            name: 'Alimentos e Bebibas',
-            hiffen_name: 'alimentos-e-bebibas',
+            name: 'Alimentos e Bebidas',
+            hiffen_name: 'alimentos-e-bebidas',
             icon: 'fas fa-wine-glass-alt',
         },
         {

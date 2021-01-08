@@ -2,7 +2,9 @@ import React from 'react'
 import ExpiredCouponItem from '../snnipets/ExpiredCouponItem';
 
 function ExpiredCoupons(props) {
-    const { categoryTitle, expiredCoupons } = props;
+    const expiredCoupons = props.expiredCoupons || [];
+    const { categoryTitle } = props;
+
     return (
         <>
             <div className="main-content expired-coupons">

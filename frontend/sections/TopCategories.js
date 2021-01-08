@@ -1,19 +1,39 @@
-import React from 'react';
-import data from '../data';
+import React, { useEffect, useContext } from 'react';
 import TopCategoryItem from '../snnipets/TopCategoryItem';
+import ShowContentWithLoadingOrError from '../snnipets/ShowContentWithLoadingOrError';
+import { DataContext } from '../store/GlobalState';
+import ACTION from '../store/Actions';
+import { getData } from '../assets/utils/fetchData';
 
-function TopCategories() {
+function TopCategories(props) {
+    const [state, dispatch] = useContext(DataContext);
+    const { listTopCategories } = state
+    const { loading, error, topCategories } = listTopCategories;
+    useEffect(async () => {
+
+        dispatch({
+            type: ACTION.TOP_CATEGORIES_REQUEST
+        });
+        try {
+            const data = await getData(props.apiURL);
+            dispatch({ type: ACTION.TOP_CATEGORIES_SUCCESS, payload: data })
+        } catch (error) {
+            dispatch({ type: ACTION.TOP_CATEGORIES_FAIL, payload: error.message })
+        }
+
+    }, [dispatch]);
     return (
         <section className="top-categories">
             <div className="suggestion-container container">
                 <h2 className="section-title">Top 20 Categorias</h2>
                 <hr className="subTitle-hr" />
                 <ul className="category-list">
+                    <ShowContentWithLoadingOrError loading={loading} error={error}>
+                        {topCategories.map((category) => (
+                            <TopCategoryItem key={category._id} category={category} />
+                        ))}
+                    </ShowContentWithLoadingOrError>
 
-                    {data.topCategories.map((category) => (
-                        <TopCategoryItem key={category._id} category={category}/>
-                    ))}
-                    
                     {/*
                     <li><a className="animais-e-pet" href="cupom/animais-e-pet" data-event="AllCategories" data-action="Top Categories"
                         data-label="Animais e Pet">Animais e Pet</a></li>
@@ -53,7 +73,7 @@ function TopCategories() {
                         data-label="Táxi">Táxi</a></li>
                         */}
                 </ul>
-            </div>          
+            </div>
         </section>
     )
 }

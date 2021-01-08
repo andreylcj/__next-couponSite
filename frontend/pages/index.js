@@ -13,10 +13,10 @@ export default function IndexPage() {
         <div className="container">
           <h1 className="title">Cupons e cashback em 2.000 lojas</h1>
           <h2 className="subtitle">Economize na sua compra usando os melhores Cupons de Desconto e Cashback!</h2>
-          <FeaturedStores />
+          <FeaturedStores apiURL='/api/lojas/index-featured-estores' />
         </div>
       </section >
-      <GeneralFeaturedCoupons />
+      <GeneralFeaturedCoupons apiURL='/api/cupons/general-featured-coupons' />
     </>
   )
 }

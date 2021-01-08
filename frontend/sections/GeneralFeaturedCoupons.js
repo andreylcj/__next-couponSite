@@ -1,17 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import ValidCouponItem from '../snnipets/ValidCouponItem';
 import GetEmail from '../snnipets/GetEmail';
 import ShowContentWithLoadingOrError from '../snnipets/ShowContentWithLoadingOrError'
-import { useDispatch, useSelector } from 'react-redux'
-import { listCouponsAction } from '../redux_store/actions/couponsActions';
+import { getData } from '../assets/utils/fetchData';
+import ACTION from '../store/Actions';
+import { DataContext } from '../store/GlobalState';
 
-function GeneralFeaturedCoupons() {
+function GeneralFeaturedCoupons(props) {
 
-    const dispatch = useDispatch();
-    const { listCoupons } = useSelector((state) => state)
+    const [state, dispatch] = useContext(DataContext);
+    const { listCoupons } = state
     const { loading, error, coupons } = listCoupons;
-    useEffect(() => {
-        dispatch(listCouponsAction())
+    useEffect(async () => {
+
+        dispatch({
+            type: ACTION.COUPONS_REQUEST
+        });
+        try {
+            const data = await getData(props.apiURL);
+            dispatch({ type: ACTION.COUPONS_SUCCESS, payload: data })
+        } catch (error) {
+            dispatch({ type: ACTION.COUPONS_FAIL, payload: error.message })
+        }
+
     }, [dispatch]);
 
     return (
